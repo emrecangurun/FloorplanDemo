@@ -1,1 +1,6 @@
 # FloorplanDemo
+
+Remember to subscribe:https://www.youtube.com/channel/UCeg4...
+Linkedin: https://www.linkedin.com/in/emre-can-...
+Discord: https://discord.gg/QdRUaZg3
+Mail:Cangurun1@gmail.com
