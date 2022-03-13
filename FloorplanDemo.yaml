@@ -1,0 +1,86 @@
+type: picture-elements
+image: /local/FloorplanDemo/gece1.png
+elements:
+  - type: image
+    entity: switch.bedroom1
+    style:
+      left: 50%
+      top: 50%
+      width: 100%
+      mix-blend-mode: lighten
+      filter: >-
+        ${ "hue-rotate(" + (states['switch.bedroom1'].attributes.hs_color ?
+        states['switch.bedroom1'].attributes.hs_color[0] : 0) + "deg)"}
+      opacity: >-
+        ${states['switch.bedroom1'].state === 'on' ? (states['
+        switch.bedroom1'].attributes.brightness / 255) : '0'}
+    state_image:
+      'off': /local/FloorplanDemo/gece1.png
+      'on': /local/FloorplanDemo/yatak1.png
+    tap_action:
+      action: none
+  - type: image
+    entity: switch.livingroom_lamp1
+    style:
+      left: 50%
+      top: 50%
+      width: 100%
+      mix-blend-mode: lighten
+      filter: >-
+        ${ "hue-rotate(" + (states['
+        switch.livingroom_lamp1'].attributes.hs_color ? states['
+        switch.livingroom_lamp1'].attributes.hs_color[0] : 0) + "deg)"}
+      opacity: >-
+        ${states[' switch.livingroom_lamp1'].state === 'on' ? (states['
+        switch.livingroom_lamp1'].attributes.brightness / 255) : '0'}
+    state_image:
+      'off': /local/FloorplanDemo/gece1.png
+      'on': /local/FloorplanDemo/salon1.png
+    tap_action:
+      action: none
+  - type: image
+    entity: switch.bathroom1
+    style:
+      left: 50%
+      top: 50%
+      width: 100%
+      mix-blend-mode: lighten
+      filter: >-
+        ${ "hue-rotate(" + (states['switch.bathroom1'].attributes.hs_color ?
+        states['switch.bathroom1'].attributes.hs_color[0] : 0) + "deg)"}
+      opacity: >-
+        ${states['switch.bathroom1'].state === 'on' ?
+        (states['switch.bathroom1'].attributes.brightness / 255) : '0'}
+    state_image:
+      'off': /local/FloorplanDemo/gece1.png
+      'on': /local/FloorplanDemo/banyo1.png
+    tap_action:
+      action: none
+  - type: state-icon
+    entity: switch.bedroom1
+    style:
+      left: 30%
+      top: 32%
+    tap_action:
+      action: toggle
+  - type: state-icon
+    entity: switch.livingroom_lamp1
+    style:
+      left: 75%
+      top: 55%
+    tap_action:
+      action: toggle
+  - type: state-icon
+    entity: switch.bathroom1
+    style:
+      left: 37%
+      top: 80%
+    tap_action:
+      action: toggle
+  - type: state-icon
+    entity: camera.camera1
+    style:
+      left: 50%
+      top: 60%
+    tap_action:
+      action: toggle
